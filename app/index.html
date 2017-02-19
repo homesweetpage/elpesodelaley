@@ -9,6 +9,9 @@
 
     <!-- <link rel="apple-touch-icon" href="apple-touch-icon.png"> -->
     <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+
+    <link rel="stylesheet" href="vendor/normalize/normalize.min.css">
+    <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -17,10 +20,44 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <h1>Work!!</h1>
+    <!-- HEADER -->
+    <header>
+
+      <!-- NAV -->
+      <nav class="navbar navbar-default navbar-fixed-top" role="banner">
+        <div class="container">
+
+          <!-- COLLAPSED BAR -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar bar-1"></span>
+              <span class="icon-bar bar-2"></span>
+              <span class="icon-bar bar-3"></span>
+            </button>
+          </div><!-- ./COLLAPSED BAR -->
+
+          <!-- NAV CONTENT -->
+          <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+              <li><a class="nav-item btn-evento" href="#">Sinopsis</a></li>
+              <li><a class="nav-item btn-stand" href="#">Trailer</a></li>
+              <li><a class="nav-itembtl btn-btl" href="#">Personaje</a></li>
+              <li id="logo"><a class="btn-home" href="#"><img src="http://acmelogos.com/images/logo-5.svg" alt="NEWS" class="img-responsive"/></a></li>
+              <li><a class="nav-item btn-comunicacion" href="#">Galeria</a></li>
+              <li><a class="nav-item btn-audiovisual" href="#">Fecha Extreno</a></li>
+              <li><a class="nav-item btn-digital" href="#">Ficha Tecnica</a></li>
+            </ul>
+          </div><!-- ./NAV CONTENT -->
+
+        </div>
+      </nav><!-- ./NAV -->
+
+    </header><!-- ./HEADER -->
 
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script>window.jQuery || document.write('<script src="vendor/jquery/jquery-1.12.0.min.js"><\/script>')</script>
+    <script src="vendor/bootstrap/bootstrap.min.js"></script>
 
     <script src="js/main.js"></script>
 
