@@ -1,17 +1,44 @@
 #trailer
-  height 100vh
+  height auto
   overflow hidden
+  background-color $gray40
 
-  #bgvid
-    position absolute
-    top 50%
-    left 50%
-    min-width 100%
-    min-height 100%
-    width auto
-    height auto
-    z-index -100
-    transform translateX(-50%) translateY(-50%)
-    //background url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg') no-repeat
-    //background-size cover
-    //transition 1s opacity
+  .col-afiche
+    text-align center
+    padding 0
+
+    .box-afiche
+      width 100%
+      height 100%
+      overflow hidden
+
+      img
+        height 100%
+        width 100%
+        transition all .3s
+        cursor pointer
+
+        &:hover
+        &:focus
+          transform scale(1.1)
+
+  .col-trailer
+    text-align center
+    padding 0
+
+    .box-trailer
+      display inline-block
+      width 100%
+      height 100%
+      overflow hidden
+      margin-bottom -5px
+
+      video
+        width 100%
+        height 100%
+        transition all .3s
+        cursor pointer
+
+        &:hover
+        &:focus
+          transform scale(1.1)
