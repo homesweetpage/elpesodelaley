@@ -11,9 +11,10 @@ var nib = require('nib');
 var jshint = require('gulp-jshint');
 
 var paths = {
-  stylus: './app/css/stylus',
-  css: './app/css',
-  js: './app/js'
+  app: './app',
+  stylus: '/css/stylus',
+  css: '/css',
+  js: '/js'
 };
 
 var plumberOpts = {
@@ -21,7 +22,7 @@ var plumberOpts = {
 };
 
 function runServer() {
-  gulp.src('./app')
+  gulp.src(paths.app)
     .pipe(plumber(plumberOpts))
     .pipe(webserver({
       host: '0.0.0.0',
@@ -31,16 +32,16 @@ function runServer() {
 }
 
 function runStylus() {
-  gulp.src(paths.stylus+'/style.styl')
+  gulp.src(paths.app + paths.stylus + '/style.styl')
     .pipe(plumber(plumberOpts))
     .pipe(stylus({
       use: nib()
     }))
-    .pipe(gulp.dest(paths.css));
+    .pipe(gulp.dest(paths.app + paths.css));
 }
 
 function jsHint() {
-  return gulp.src([paths.js+'/main.js', './gulpfile.js'])
+  return gulp.src([paths.app + paths.js + '/main.js', './gulpfile.js'])
     .pipe(plumber(plumberOpts))
     .pipe(jshint('.jshintrc'))
     .pipe(jshint.reporter('jshint-stylish'))
@@ -48,8 +49,8 @@ function jsHint() {
 }
 
 function watchFiles() {
-  gulp.watch([paths.stylus+'/**/*.styl'], ['stylus']);
-  gulp.watch([paths.js+'/**/*.js', './gulpfile.js'], ['jshint']);
+  gulp.watch([paths.app + paths.stylus + '/**/*.styl'], ['stylus']);
+  gulp.watch([paths.app + paths.js + '/**/*.js', './gulpfile.js'], ['jshint']);
 }
 
 gulp.task('stylus', runStylus);
