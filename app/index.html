@@ -47,12 +47,10 @@
             <ul class="nav navbar-nav">
               <li class="pull-left"><a class="nav-item btn-evento" href="#">Sinopsis</a></li>
               <li class="pull-left"><a class="nav-item btn-stand" href="#">Trailer</a></li>
-              <li class="pull-left"><a class="nav-itembtl btn-btl" href="#">Postales</a></li>
-              <li class="pull-left"><a class="nav-itembtl btn-btl" href="#">Expediente</a></li>
+              <li class="pull-left"><a class="nav-itembtl btn-btl" href="#">Personaje</a></li>
+              <li class="pull-right"><a class="nav-item btn-digital" href="#">Expediente</a></li>
               <li class="pull-right"><a class="nav-item btn-comunicacion" href="#">Making Off</a></li>
-              <li class="pull-right"><a class="nav-item btn-audiovisual" href="#">Storyboards</a></li>
-              <li class="pull-right"><a class="nav-item btn-digital" href="#">Peligro</a></li>
-              <li class="pull-right"><a class="nav-item btn-digital" href="#">Fotos</a></li>
+              <li class="pull-right"><a class="nav-item btn-audiovisual" href="#">Galeria</a></li>
             </ul>
           </div><!-- ./NAV CONTENT -->
 
@@ -60,6 +58,18 @@
       </nav><!-- ./NAV -->
 
     </header><!-- ./HEADER -->
+
+    <div id="Modal" class="elpesodelmodal">
+
+      <!-- The Close Button -->
+      <span class="mclose" onclick="document.getElementById('Modal').style.display='none'">&times;</span>
+
+      <!-- Modal Content (The Image) -->
+      <!-- <img class="modal-content" id="imgModal"> -->
+      <div class="mcontainer">
+
+      </div>
+    </div>
 
     <!-- HOME -->
     <section id="home" class="layout-section">
@@ -80,12 +90,12 @@
     <section id="trailer" class="layout-section">
       <div class="col-afiche col-md-offset-1 col-md-3">
         <div class="box-afiche">
-          <img src="images/afiche2.jpg" alt="El Peso de la Ley - Afiche">
+          <img id="afiche" src="images/afiche2.jpg" alt="El Peso de la Ley - Afiche">
         </div>
       </div>
       <div class="col-trailer col-md-7">
         <div class="box-trailer">
-          <video preload="auto" autoplay muted loop>
+          <video id="avance" preload="auto" autoplay muted loop>
             <source src="videos/trailer.mp4" type="video/mp4">
           </video>
         </div>

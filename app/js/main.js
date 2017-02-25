@@ -1,3 +1,7 @@
 'use strict';
 
-console.log('hola mundo!');
+// $(document).ready(function () {
+//  $('#afiche').click(function () {
+//    // body...
+//  });
+// });
