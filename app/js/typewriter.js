@@ -26,7 +26,6 @@ $(document).ready(function () {
         if(enAnim.val == false){
             if(elem.html() !== str[estado]){
                 enAnim.val = true;
-                console.log(enAnimBarrientos.val,enAnimGrandinetti.val,enAnimMiras.val,enAnimAruzzi.val,enAnimBarassi.val);
                 typeWriter(elem,str[estado],0,enAnim);
             }      
         }
