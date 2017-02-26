@@ -3,6 +3,11 @@
   max-height: 100vh;
   position: relative;
   overflow: hidden;
+  background-color: black;
+  background-image: url('../images/logo.png');
+  background-size: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .full-screen {
   background-size: cover;
