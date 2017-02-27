@@ -11,6 +11,10 @@ function getWindowWidth() {
   return window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 }
 
+function getWindowHeight() {
+  return window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+}
+
 function animateResponsive() {
   return (getWindowWidth() >= 768);
 }
@@ -76,12 +80,50 @@ function animateLogo(st) {
   }
 }
 
+function animateNav() {
+  var $nav = $('.navbar');
+
+  $nav.removeClass('hidden').addClass('animated slideInDown');
+}
+
+function animateCast(st) {
+  var $cast = $('.cast');
+  var $box = $cast.children('.box-pj');
+  var wa = $cast.offset().top - (getWindowHeight() / 2);
+
+  if (animate(st, wa)) {
+    $box.each(function(i) {
+      var $self = $(this);
+      setTimeout(function() {
+        $self.removeClass('hidden').addClass('animated zoomIn');
+      }, 200*i);
+    });
+  }
+}
+
+function animateCrew(st) {
+  var $crew = $('.crew');
+  var $tr = $crew.find('tr');
+  var wa = $crew.offset().top - (getWindowHeight() / 2);
+
+  if (animate(st, wa)) {
+    $tr.each(function(i) {
+      var $self = $(this);
+      setTimeout(function() {
+        $self.removeClass('hidden').addClass('animated fadeInDown');
+      }, 90*i);
+    });
+  }
+}
+
 function animateHandler() {
   if (animateResponsive()) {
     var st = $(window).scrollTop();
 
     animateHome(st);
     animateLogo(st);
+    animateCast(st);
+    animateCrew(st);
   }
 }
 
@@ -103,6 +145,7 @@ function animateScroll() {
 function animateReady() {
   animateHandler();
   animateScroll();
+  animateNav();
 }
 
 $(document).ready(animateReady);
