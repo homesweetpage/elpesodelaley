@@ -76,13 +76,15 @@
     <!-- HOME -->
     <section id="home" class="layout-section">
       <div class="title hidden">
-        <img src="images/logo.png" alt="El Peso de la Ley" class="img-responsive">
+        <div class="box-homeLogo">
+          <img src="images/logo.png" alt="El Peso de la Ley" class="img-responsive">
+        </div>
         <span>Una película de fernán mirás</span>
       </div>
     </section><!-- ./HOME -->
 
     <!-- SINOPSIS -->
-    <section id="sinopsis">
+    <section id="sinopsis" class="section-parallax">
       <div class="section-main">
         <div class="container">
           <div class="sinopsis">
@@ -90,7 +92,7 @@
             <span>Una escéptica abogada se ve obligada a luchar contra <br>
               todos los vicios del sistema judicial para recuperar su <br>
               vocación y la fe en la justicia.</span>
-            <a href="#">(sinopsis completa)</a>
+            <a href="#">sinopsis completa</a>
           </div>
           <div class="cast col-md-6">
             <div class="box-pj col-md-4 col-sm-4 col-xs-6 hidden">
@@ -145,55 +147,55 @@
           <div class="crew col-md-6">
             <table class="table">
               <tbody>
-                <tr class="hidden">
+                <tr>
                   <td>Dirección</td>
                   <td>Fernán Mirás</td>
                 </tr>
-                <tr class="hidden">
+                <tr>
                   <td>Guión</td>
                   <td>Roberto Gispert</td>
                 </tr>
-                <tr class="hidden">
+                <tr>
                   <td></td>
                   <td>Fernán Mirás</td>
                 </tr>
-                <tr class="hidden">
+                <tr>
                   <td>Producción General</td>
                   <td>Fernando Sokolowicz</td>
                 </tr>
-                <tr class="hidden">
+                <tr>
                   <td>Producción Ejecutiva</td>
                   <td>Victoria Aizenstat</td>
                 </tr>
-                <tr class="hidden">
+                <tr>
                   <td>Director de Producción</td>
                   <td>Roberto Gispert</td>
                 </tr>
-                <tr class="hidden">
+                <tr>
                   <td>Dirección de Fotografía</td>
                   <td>Mariana Russo</td>
                 </tr>
-                <tr class="hidden">
+                <tr>
                   <td>Dirección de Arte</td>
                   <td>Sergio Hernandez</td>
                 </tr>
-                <tr class="hidden">
+                <tr>
                   <td>Vestuario</td>
                   <td>Elda Estela Ledesma</td>
                 </tr>
-                <tr class="hidden">
+                <tr>
                   <td>Dirección de Sonido</td>
                   <td>Javier Stavropulos (ASA)</td>
                 </tr>
-                <tr class="hidden">
+                <tr>
                   <td>Sonido Directo</td>
                   <td>Ignacio Goyen</td>
                 </tr>
-                <tr class="hidden">
+                <tr>
                   <td>Dirección Musical</td>
                   <td>Cecilia Pugliese</td>
                 </tr>
-                <tr class="hidden">
+                <tr>
                   <td>Montajista</td>
                   <td>Anabela Lattanzio (EDA)</td>
                 </tr>
@@ -208,25 +210,40 @@
     </section><!-- ./SINOPSIS -->
 
     <!-- TRAILER -->
-    <section id="trailer" class="layout-section">
-      <div class="col-afiche col-md-offset-1 col-md-3">
-        <div class="box-afiche">
-          <img id="afiche" src="images/afiche2.jpg" alt="El Peso de la Ley - Afiche">
+    <section id="trailer" class="section-parallax">
+      <div class="section-main">
+        <div class="container">
+          <div class="estreno">
+            <h3>Estreno 23 de Marzo</h3>
+          </div>
+        </div>
+        <div class="col-afiche col-md-offset-1 col-md-3">
+          <div class="box-afiche">
+            <img id="afiche" src="images/afiche2.jpg" alt="El Peso de la Ley - Afiche">
+          </div>
+        </div>
+        <div class="col-trailer col-md-7">
+          <div class="box-trailer">
+            <video id="avance" preload="auto" autoplay muted loop>
+              <source src="videos/trailer.mp4" type="video/mp4">
+            </video>
+          </div>
+          <!--<div class="box-trailer">
+            <video preload="auto" autoplay muted loop>
+              <source src="videos/bird2.mp4" type="video/mp4">
+            </video>
+          </div>-->
         </div>
       </div>
-      <div class="col-trailer col-md-7">
-        <div class="box-trailer">
-          <video id="avance" preload="auto" autoplay muted loop>
-            <source src="videos/trailer.mp4" type="video/mp4">
-          </video>
-        </div>
-        <!--<div class="box-trailer">
-          <video preload="auto" autoplay muted loop>
-            <source src="videos/bird2.mp4" type="video/mp4">
-          </video>
-        </div>-->
-          </div>
     </section><!-- ./TRAILER -->
+
+    <!-- FECHA ESTRENO -->
+    <!-- <div id="estreno">
+      <div class="section-main">
+        <h1>Estreno 23 de Marzo</h1>
+      </div>
+    </div> -->
+    <!-- ./FECHA ESTRENO -->
 
     <!-- GALERIA -->
     <section id="galeria" class="carousel slide carousel-fade" data-ride="carousel">
@@ -257,13 +274,6 @@
         <span class="sr-only">Next</span>
       </a><!-- ./CONTROLES -->
     </section><!-- ./GALERIA -->
-
-    <!-- FECHA EXTRENO -->
-    <section id="extreno">
-      <div class="section-main">
-
-      </div>
-    </section><!-- ./FECHA EXTRENO -->
 
     <!-- FICHA TECNICA -->
     <section id="tecnica" class="layout-section">
