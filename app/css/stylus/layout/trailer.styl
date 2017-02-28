@@ -1,52 +1,65 @@
 #trailer
-  height 100vh
-  padding-top 20vh
   background-image url('../images/postales/lldll_a01_007671.jpg')
-  background-repeat no-repeat
-  background-size cover
-  position relative
 
-  .col-afiche
-    text-align center
-    padding 0
-    z-index 500
-    perspective 150px
+  .section-main
+    background-color $black
+    width 100%
+    padding 50px 0 100px
+    display inline-block
 
-    .box-afiche
-      width 100%
-      height 100%
-      overflow hidden
-      transform rotateY(3deg)
+    .estreno
+      text-align center
+      margin-bottom 50px
 
-      img
-        width 100%
-        transition all .3s
-        cursor pointer
+      h3
+        font-family $fontDE
+        font-size 6em
+        color $white
+        letter-spacing 5px
+        text-transform uppercase
+        margin-bottom 20px
 
-        &:hover
-        &:focus
-          transform scale(1.1)
+    .col-afiche
+      text-align center
+      padding 0
+      z-index 500
+      perspective 150px
 
-  .col-trailer
-    text-align center
-    padding 0
-    z-index 500
-    perspective 150px
-
-    .box-trailer
-      display inline-block
-      width 100%
-      height 100%
-      overflow hidden
-      margin-bottom -5px
-      transform rotateY(-1.5deg)
-
-      video
+      .box-afiche
         width 100%
         height 100%
-        transition all .3s
-        cursor pointer
+        overflow hidden
+        transform rotateY(3deg)
 
-        &:hover
-        &:focus
-          transform scale(1.1)
+        img
+          width 100%
+          transition all .3s
+          cursor pointer
+
+          &:hover
+          &:focus
+            transform scale(1.1)
+
+    .col-trailer
+      text-align center
+      padding 0
+      z-index 500
+      perspective 150px
+
+      .box-trailer
+        display inline-block
+        width 100%
+        height 100%
+        overflow hidden
+        margin-bottom -5px
+        transform rotateY(-1.5deg)
+
+        video
+          width 100%
+          height 100%
+          transition all .3s
+          cursor pointer
+
+          &:hover
+          &:focus
+            transform scale(1.1)

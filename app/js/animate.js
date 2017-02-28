@@ -25,7 +25,7 @@ function animate(st, wa) {
 
 function animateHome(st) {
   var $home = $('#home .title');
-  var $img = $home.children('img');
+  var $img = $home.children('.box-homeLogo').children('img');
   var $span = $home.children('span');
   var wa = 60;
 
@@ -101,24 +101,25 @@ function animateCast(st) {
   }
 }
 
-function animateCrew(st) {
-  var $crew = $('.crew .table');
-  var $tr = $crew.find('tr');
-  var wa = $crew.offset().top - (getWindowHeight() * 2/3);
+// function animateCrew(st) {
+//   var $crew = $('.crew .table');
+//   var $tr = $crew.find('tr');
+//   var wa = $crew.offset().top - (getWindowHeight() * 2/3);
 
-  if (animate(st, wa)) {
-    $tr.each(function(i) {
-      var $self = $(this);
-      setTimeout(function() {
-        $self.removeClass('hidden').addClass('animated zoomIn');
-      }, 90*i);
-    });
-  }
-}
+//   if (animate(st, wa)) {
+//     $tr.each(function(i) {
+//       var $self = $(this);
+//       setTimeout(function() {
+//         $self.removeClass('hidden').addClass('animated zoomIn');
+//       }, 90*i);
+//     });
+//   }
+// }
 
-function animateFooter(st) {
+function animateFooter() {
   var $footer = $('#logos-footer');
   var wa = ((window.innerHeight + window.scrollY) >= document.body.offsetHeight);
+
   if (wa) {
     $footer.removeClass('hidden').addClass('animated slideInUp').one(animationEnd, function() {
         $(this).removeClass('animated slideInUp');
@@ -140,8 +141,8 @@ function animateHandler() {
   if (!animateResponsive()) {
 
     animateCast(st);
-    animateCrew(st);
-    animateFooter(st);
+    //animateCrew(st);
+    animateFooter();
   }
 
   animateHome(st);
