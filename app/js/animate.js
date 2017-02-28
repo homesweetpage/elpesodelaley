@@ -89,28 +89,28 @@ function animateNav() {
 function animateCast(st) {
   var $cast = $('.cast');
   var $box = $cast.children('.box-pj');
-  var wa = $cast.offset().top - (getWindowHeight() / 2);
+  var wa = $cast.offset().top - (getWindowHeight() * 2/3);
 
   if (animate(st, wa)) {
     $box.each(function(i) {
       var $self = $(this);
       setTimeout(function() {
-        $self.removeClass('hidden').addClass('animated zoomIn');
+        $self.removeClass('hidden').addClass('animated fadeIn');
       }, 200*i);
     });
   }
 }
 
 function animateCrew(st) {
-  var $crew = $('.crew');
+  var $crew = $('.crew .table');
   var $tr = $crew.find('tr');
-  var wa = $crew.offset().top - (getWindowHeight() / 2);
+  var wa = $crew.offset().top - (getWindowHeight() * 2/3);
 
   if (animate(st, wa)) {
     $tr.each(function(i) {
       var $self = $(this);
       setTimeout(function() {
-        $self.removeClass('hidden').addClass('animated fadeInDown');
+        $self.removeClass('hidden').addClass('animated zoomIn');
       }, 90*i);
     });
   }
