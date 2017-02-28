@@ -1,3 +1,5 @@
+'use strict'
+
 $(document).ready(function () {
 
     var enAnimBarrientos = { val: false };
@@ -6,6 +8,7 @@ $(document).ready(function () {
     var enAnimMiras = { val: false };
     var enAnimAruzzi = { val: false };
     var enAnimBarassi = { val: false };
+    var enAnimDisable = [{ val: false },{ val: false }];
 
     function typeWriter(elem,text,i,enAnim) {
         
@@ -27,6 +30,15 @@ $(document).ready(function () {
             if(elem.html() !== str[estado]){
                 enAnim.val = true;
                 typeWriter(elem,str[estado],0,enAnim);
+            }      
+        }
+    }
+
+    function typeWriteDefault(elem,str,enAnim){
+        if(enAnim.val == false){
+            if(elem.html() !== str){
+                enAnim.val = true;
+                typeWriter(elem,str,0,enAnim);
             }      
         }
     }
@@ -91,8 +103,21 @@ $(document).ready(function () {
         },800);}
     });
 
+    $('.disable').click(function(){
+        var elem = $(this).children();
+        var strAux = elem.html();
+        var enAnim;
+        if(strAux == 'Making Off'){
+            enAnim = 0;
+        }
+        else if(strAux == 'Expediente'){
+            enAnim = 1;
+        };
+        elem.addClass('disabled-link');
+        typeWriteDefault(elem,'en construcción',enAnimDisable[enAnim]);
+        setTimeout(function(){
+            elem.removeClass('disabled-link');
+            typeWriteDefault(elem,strAux,enAnimDisable[enAnim]);
+        },2000);
+    });
 });
-
-
-
-
