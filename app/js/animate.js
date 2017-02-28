@@ -16,7 +16,7 @@ function getWindowHeight() {
 }
 
 function animateResponsive() {
-  return (getWindowWidth() >= 768);
+  return (getWindowWidth() < 768);
 }
 
 function animate(st, wa) {
@@ -135,15 +135,17 @@ function animateFooter(st) {
 }
 
 function animateHandler() {
-  if (animateResponsive()) {
-    var st = $(window).scrollTop();
+  var st = $(window).scrollTop();
 
-    animateHome(st);
-    animateLogo(st);
+  if (!animateResponsive()) {
+
     animateCast(st);
     animateCrew(st);
     animateFooter(st);
   }
+
+  animateHome(st);
+  animateLogo(st);
 }
 
 function animateScroll() {
