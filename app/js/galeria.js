@@ -23,3 +23,7 @@ $('.carousel').carousel({
   interval: 6000,
   pause: "false"
 });
+
+$('.carousel-control').click(function(){
+  $('.carousel').carousel('pause');
+});

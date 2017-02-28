@@ -116,6 +116,24 @@ function animateCrew(st) {
   }
 }
 
+function animateFooter(st) {
+  var $footer = $('#logos-footer');
+  var wa = ((window.innerHeight + window.scrollY) >= document.body.offsetHeight);
+  if (wa) {
+    $footer.removeClass('hidden').addClass('animated slideInUp').one(animationEnd, function() {
+        $(this).removeClass('animated slideInUp');
+      });
+  }
+  else{
+    if(!$footer.hasClass('hidden')){
+      $footer.addClass('animated slideOutDown').one(animationEnd, function() {
+        $(this).removeClass('animated slideOutDown');
+        $footer.addClass('hidden');
+      });
+    }
+  }
+}
+
 function animateHandler() {
   if (animateResponsive()) {
     var st = $(window).scrollTop();
@@ -124,6 +142,7 @@ function animateHandler() {
     animateLogo(st);
     animateCast(st);
     animateCrew(st);
+    animateFooter(st);
   }
 }
 

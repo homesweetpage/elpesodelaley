@@ -22,7 +22,16 @@
     position: absolute;
     top: 40%;
     bottom: 40%;
-    background-size: contain;
+    width: 7%;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat !important;
+}
+.carousel-control-left{
+    margin-left: 1%;
+}
+.carousel-control-right{
+    margin-right: 1%;
 }
 .carousel-control:focus {
   opacity: 0.5;
