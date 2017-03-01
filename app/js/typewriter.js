@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 $(document).ready(function () {
 
@@ -15,18 +15,18 @@ $(document).ready(function () {
         if (i < (text.length)) {
                 elem.html(text.substring(0, i+1));
                 setTimeout(function() {
-                    typeWriter(elem,text, i + 1,enAnim)
+                    typeWriter(elem,text, i + 1,enAnim);
                 }, 20);
         }
         else{
             enAnim.val = false;
         }
-    };
+    }
 
     function typeWrite(pj,estado,enAnim){
         var elem = pj.parent().next().find('.typewriter');
-        var str = pj.children().attr("alt").split('-');
-        if(enAnim.val == false){
+        var str = pj.children().attr('alt').split('-');
+        if(enAnim.val === false){
             if(elem.html() !== str[estado]){
                 enAnim.val = true;
                 typeWriter(elem,str[estado],0,enAnim);
@@ -35,7 +35,7 @@ $(document).ready(function () {
     }
 
     function typeWriteDefault(elem,str,enAnim){
-        if(enAnim.val == false){
+        if(enAnim.val === false){
             if(elem.html() !== str){
                 enAnim.val = true;
                 typeWriter(elem,str,0,enAnim);
@@ -47,7 +47,7 @@ $(document).ready(function () {
         typeWrite($(this),1,enAnimBarrientos);
     },function(){
         typeWrite($(this),0,enAnimBarrientos);
-        if(!$('#pj-barrientos').is(":hover")){
+        if(!$('#pj-barrientos').is(':hover')){
             setTimeout(function(){
             typeWrite($('#pj-barrientos'),0,enAnimBarrientos);
         },800);}
@@ -57,7 +57,7 @@ $(document).ready(function () {
         typeWrite($(this),1,enAnimGrandinetti);
     },function(){
         typeWrite($(this),0,enAnimGrandinetti);
-        if(!$('#pj-grandinetti').is(":hover")){
+        if(!$('#pj-grandinetti').is(':hover')){
             setTimeout(function(){
             typeWrite($('#pj-grandinetti'),0,enAnimGrandinetti);
         },800);}
@@ -67,7 +67,7 @@ $(document).ready(function () {
         typeWrite($(this),1,enAnimOnetto);
     },function(){
         typeWrite($(this),0,enAnimOnetto);
-        if(!$('#pj-onetto').is(":hover")){
+        if(!$('#pj-onetto').is(':hover')){
             setTimeout(function(){
             typeWrite($('#pj-onetto'),0,enAnimOnetto);
         },800);}
@@ -77,7 +77,7 @@ $(document).ready(function () {
         typeWrite($(this),1,enAnimMiras);
     },function(){
         typeWrite($(this),0,enAnimMiras);
-        if(!$('#pj-miras').is(":hover")){
+        if(!$('#pj-miras').is(':hover')){
             setTimeout(function(){
             typeWrite($('#pj-miras'),0,enAnimMiras);
         },800);}
@@ -87,7 +87,7 @@ $(document).ready(function () {
         typeWrite($(this),1,enAnimAruzzi);
     },function(){
         typeWrite($(this),0,enAnimAruzzi);
-        if(!$('#pj-aruzzi').is(":hover")){
+        if(!$('#pj-aruzzi').is(':hover')){
             setTimeout(function(){
             typeWrite($('#pj-aruzzi'),0,enAnimAruzzi);
         },800);}
@@ -97,7 +97,7 @@ $(document).ready(function () {
         typeWrite($(this),1,enAnimBarassi);
     },function(){
          typeWrite($(this),0,enAnimBarassi);
-         if(!$('#pj-barassi').is(":hover")){
+         if(!$('#pj-barassi').is(':hover')){
             setTimeout(function(){
             typeWrite($('#pj-barassi'),0,enAnimBarassi);
         },800);}
@@ -107,12 +107,12 @@ $(document).ready(function () {
         var elem = $(this).children();
         var strAux = elem.html();
         var enAnim;
-        if(strAux == 'Making Off'){
+        if(strAux === 'Making Off'){
             enAnim = 0;
         }
-        else if(strAux == 'Expediente'){
+        else if(strAux === 'Expediente'){
             enAnim = 1;
-        };
+        }
         elem.addClass('disabled-link');
         typeWriteDefault(elem,'en construcción',enAnimDisable[enAnim]);
         setTimeout(function(){
