@@ -38,15 +38,15 @@ function modalAfiche() {
 }
 
 function modalTrailer() {
-  // $('#avance').click(function () {
-  //   var $video = createModal.video();
-  //   var $container = createModal.container($video);
-  //   modalInsert($container);
-  // });
+  $('#avance').click(function () {
+    var $video = createModal.video();
+    var $container = createModal.container($video);
+    modalInsert($container);
+  });
 }
 
 function modalCarousel() {
-  $('#avance').click(function () {
+  $('#rodaje').click(function () {
     var $carousel = createModal.carousel();
     var $container = createModal.container($carousel);
     modalInsert($container);
