@@ -135,6 +135,15 @@ function animateFooter() {
   }
 }
 
+function animateActive(st) {
+  $('section').each(function() {
+    if (animate(st+100, $(this).offset().top)) {
+      $('li.active').removeClass('active');
+      $('a[href="#'+this.id+'"]').parent().addClass('active');
+    }
+  });
+}
+
 function animateHandler() {
   var st = $(window).scrollTop();
 
@@ -147,6 +156,7 @@ function animateHandler() {
 
   animateHome(st);
   animateLogo(st);
+  animateActive(st);
 }
 
 function animateScroll() {
