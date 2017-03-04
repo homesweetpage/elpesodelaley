@@ -51,6 +51,11 @@ function modalCarousel() {
     var $container = createModal.container($carousel);
     modalInsert($container);
   });
+  $('#prensa').click(function () {
+    var $carousel = createModal.carousel();
+    var $container = createModal.container($carousel);
+    modalInsert($container);
+  });
 }
 
 function modalCast() {
@@ -58,7 +63,42 @@ function modalCast() {
     event.preventDefault();
     var $img = createModal.img();
     var $container = createModal.container($img);
+    $img.attr('src', 'images/postales/lldll_a02_032526.jpg');
+    modalInsert($container);
+  });
+  $('#pj-onetto').click(function(event) {
+    event.preventDefault();
+    var $img = createModal.img();
+    var $container = createModal.container($img);
+    $img.attr('src', 'images/postales/lldll_a03_035879.jpg');
+    modalInsert($container);
+  });
+  $('#pj-grandinetti').click(function(event) {
+    event.preventDefault();
+    var $img = createModal.img();
+    var $container = createModal.container($img);
+    $img.attr('src', 'images/postales/lldll_a03_035764.jpg');
+    modalInsert($container);
+  });
+  $('#pj-miras').click(function(event) {
+    event.preventDefault();
+    var $img = createModal.img();
+    var $container = createModal.container($img);
+    $img.attr('src', 'images/postales/lldll_a03_028969.jpg');
+    modalInsert($container);
+  });
+  $('#pj-aruzzi').click(function(event) {
+    event.preventDefault();
+    var $img = createModal.img();
+    var $container = createModal.container($img);
     $img.attr('src', 'images/postales/lldll_a03_027544.jpg');
+    modalInsert($container);
+  });
+  $('#pj-barassi').click(function(event) {
+    event.preventDefault();
+    var $img = createModal.img();
+    var $container = createModal.container($img);
+    $img.attr('src', 'images/postales/lldll_a03_034472.jpg');
     modalInsert($container);
   });
 }
