@@ -30,8 +30,23 @@ function smoothScrolling() {
 	});
 }
 
+function soundHandle() {
+	var $control = $('#soundControl');
+
+	$control.click(function(event) {
+		event.preventDefault();
+		var $i = $(this).children('i');
+		if ($i.hasClass('icon-volume-up')) {
+			$i.removeClass('icon-volume-up').addClass('icon-volume-off');
+		} else {
+			$i.removeClass('icon-volume-off').addClass('icon-volume-up');
+		}
+	});
+}
+
 function documentReady() {
 	smoothScrolling();
+	soundHandle();
 }
 
 $(document).ready(documentReady);
