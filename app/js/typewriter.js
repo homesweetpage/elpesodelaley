@@ -8,6 +8,8 @@ $(document).ready(function () {
     var enAnimMiras = { val: false };
     var enAnimAruzzi = { val: false };
     var enAnimBarassi = { val: false };
+    var enAnimRosso = { val: false };
+    var enAnimLambertini = { val: false };
     var enAnimDisable = [{ val: false },{ val: false }];
 
     function typeWriter(elem,text,i,enAnim) {
@@ -100,6 +102,24 @@ $(document).ready(function () {
          if(!$('#pj-barassi').is(':hover')){
             setTimeout(function(){
             typeWrite($('#pj-barassi'),0,enAnimBarassi);
+        },800);}
+    });
+    $('#pj-rosso').hover(function(){
+        typeWrite($(this),1,enAnimRosso);
+    },function(){
+         typeWrite($(this),0,enAnimRosso);
+         if(!$('#pj-rosso').is(':hover')){
+            setTimeout(function(){
+            typeWrite($('#pj-rosso'),0,enAnimRosso);
+        },800);}
+    });
+    $('#pj-lambertini').hover(function(){
+        typeWrite($(this),1,enAnimLambertini);
+    },function(){
+         typeWrite($(this),0,enAnimLambertini);
+         if(!$('#pj-lambertini').is(':hover')){
+            setTimeout(function(){
+            typeWrite($('#pj-lambertini'),0,enAnimLambertini);
         },800);}
     });
 
