@@ -129,7 +129,7 @@ function modalSinopsis() {
   $('#sinopsis-completa').click(function () {
     var $img = createModal.sinopsis();
     var $container = createModal.container($img);
-    $img.attr('src', 'images/postales/bosque.jpg');
+    $img.attr('src', 'images/postales/galeria/test2 lldll_a02_000615.jpg');
     modalInsert($container);
   });
 }
