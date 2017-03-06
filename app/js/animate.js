@@ -154,11 +154,12 @@ function animateHandler() {
 
     animateCast(st);
     //animateCrew(st);
-    animateFooter();
+    
   }
 
   animateHome(st);
   animateLogo(st);
+  animateFooter();
   animateActive(st);
 }
 

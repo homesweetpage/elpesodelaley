@@ -8,15 +8,16 @@ footer
     background-color transparent
     border none
 
-    // &:after
-    //     content ""
-    //     position absolute
-    //     z-index 1000
-    //     background-linear-gradient3d(to top, rgba(0, 0, 0, 0.6), 0%, rgba(0, 0, 0, 0.2), 80%, rgba(0, 0, 0, 0), 100%)
-    //     width 100%
-    //     height 100%
-    //     top 0
-    //     left 0
+    &:after
+        content ""
+        position absolute
+        z-index 1000
+        background-linear-gradient3d(to top, rgba(0, 0, 0, 0.6), 0%, rgba(0, 0, 0, 0.2), 80%, rgba(0, 0, 0, 0), 100%)
+        width 100%
+        height 100%
+        z-index -1
+        top 0
+        left 0
 
     .container
         vertical-align bottom
@@ -41,6 +42,7 @@ footer
     .pull-left
         padding-left 15px
         margin-top 30px
+        z-index 3000
         
         a
             font-size 2em
