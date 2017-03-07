@@ -151,10 +151,11 @@ function animateHandler() {
   var st = $(window).scrollTop();
 
   if (!animateResponsive()) {
-
     animateCast(st);
-    //animateCrew(st);
-    
+  }
+  else{
+    var $cast = $('.cast');
+    $cast.children().removeClass('hidden');
   }
 
   animateHome(st);

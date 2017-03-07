@@ -1,5 +1,7 @@
 'use strict';
 
+var audio;
+
 function smoothScrolling() {
 
 	var inScroll = false;
@@ -38,8 +40,10 @@ function soundHandle() {
 		var $i = $(this).children('i');
 		if ($i.hasClass('icon-volume-up')) {
 			$i.removeClass('icon-volume-up').addClass('icon-volume-off');
+			audio.pause();
 		} else {
 			$i.removeClass('icon-volume-off').addClass('icon-volume-up');
+			audio.play();
 		}
 	});
 }
@@ -47,6 +51,9 @@ function soundHandle() {
 function documentReady() {
 	smoothScrolling();
 	soundHandle();
+    audio = new Audio('audio/creditos finales.mp3');
+	audio.volume = 0.2;
+    audio.play();
 }
 
 $(document).ready(documentReady);
