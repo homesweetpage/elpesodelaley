@@ -117,11 +117,13 @@ function animateCast(st) {
 // }
 
 function animateFooter() {
+  var $footerPosta = $('footer');
   var $footer = $('#logos-footer');
   var $hshp = $('#hshp');
   var wa = ((window.innerHeight + window.scrollY) >= document.body.offsetHeight);
 
   if (wa) {
+    $footerPosta.addClass('fresponsive');
     $hshp.addClass('onBottom');
     $footer.removeClass('hidden').addClass('animated slideInUp').one(animationEnd, function() {
         $(this).removeClass('animated slideInUp');
@@ -129,6 +131,7 @@ function animateFooter() {
   }
   else{
     if(!$footer.hasClass('hidden')){
+      $footerPosta.removeClass('fresponsive');
       $hshp.removeClass('onBottom');
       $footer.addClass('animated slideOutDown').one(animationEnd, function() {
         $(this).removeClass('animated slideOutDown');

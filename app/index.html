@@ -177,8 +177,9 @@
           </div>
         </div>
         <div class="col-trailer col-md-7 col-sm-8">
-          <div class="box-trailer">
-            <video id="avance" preload="auto" autoplay muted loop>
+          <div id="avance" class="box-trailer">
+            <div class="overlay-video"></div>
+            <video preload="auto" autoplay muted loop>
               <source src="videos/trailer.mp4" type="video/mp4">
             </video>
           </div>
@@ -246,11 +247,14 @@
         </div>
         <div class="section-btn">
           <div class="container">
-            <div class="col-sm-6">
-              <button id="rodaje">Ver fotos de Rodaje</button>
+            <div class="col-md-4">
+              <button id="rodaje1">Fotos de Rodaje 1</button>
             </div>
-            <div class="col-sm-6">
-              <button id="prensa">ver fotos de Prensa</button>
+            <div class="col-md-4">
+              <button id="rodaje2">Fotos de Rodaje 2</button>
+            </div>
+            <div class="col-md-4">
+              <button id="prensa">Fotos de Prensa</button>
             </div>
           </div>
         </div>
@@ -267,7 +271,7 @@
               <p>Era un reto para la película la idea de usar música de Bach para piano en esta historia de abogados que parecía pedir una banda sonora clásica de películas del género.</p>
               <p>Para integrarla en toda la película fue clave tanto  la idea de que el personaje de María Onetto escuchara casetes de Bach en su oficina, como  la pieza de títulos inicial. Como ocurre seguido en el cine, por un “afortunado accidente” el director  mandó un archivo equivocado en el primer corte de la película en la secuencia de títulos y esa música mágicamente establecía el tono de la película, y el uso del  piano tanto en las secuencias del pueblo como en los tribunales.</p>
               <p>Hoy en día es imposible imaginarse la película sin esa música.</p>
-              <a id="sinopsis-completa" href="https://soundcloud.com/user-148870273" target="_blank">banda sonora completa</a>
+              <a id="musica-completa" href="https://soundcloud.com/user-148870273" target="_blank">banda sonora completa</a>
             </div>
             <div class="col-md-6">
               <p>La profundidad y genialidad de Bach podían darle un tono particular a la película y una unidad compositiva, usando pocas piezas relacionadas entre sí: las "familias" de piezas de El Clave Bien Temperado y de Suite Francesa en Do Menor, y trabajar con ellas también para la música incidental. El arduo trabajo de Cecilia Pugliese, directora musical de la banda sonora, pianista e intérprete de todas las piezas fue lo que permitió utilizar las mismas piezas enteras, parcialmente, o adaptadas en su tonalidad e interpretación o incluso intervenirlas melódicamente. </p>
@@ -281,8 +285,8 @@
     <!-- MAKING OFF -->
     <section id="makingoff" class="section-parallax">
       <div class="section-main">
-        <div class="col-md-6">
-          <img src="images/construccion.png" alt="Sección en construción">
+        <div class="col-md-6 inconstructor">
+          <img src="images/construccion.png" alt="Sección en construción" class="img-responsive">
         </div>
         <div class="crew col-md-6">
           <table class="table">

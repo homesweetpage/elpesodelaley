@@ -48,20 +48,46 @@
       perspective 150px
 
       .box-trailer
+        position relative
         display inline-block
         width 100%
         height 100%
         overflow hidden
         margin-bottom -5px
         transform rotateY(-1.5deg)
+        
+        .overlay-video
+          position absolute
+          top 0
+          left 0
+          width 100%
+          height 100%
+          background-color rgba($black, 0.5)
+          font-family 'icomoon' !important
+          transition all 0.3s
+          cursor pointer
+          
+          &:hover
+          &:focus
+          &:active
+            background-color rgba($black, 0.2)
+            
+            &:before
+              color rgba($white, 0.7)
+          
+          &:before
+            position absolute
+            top calc(50% - 70px)
+            left calc(50% - 70px)
+            color rgba($white, 0.3)
+            width 140px
+            height 140px
+            font-size 7em
+            content "\e903"
+            transition all 0.3s
 
         video
           width 100%
           height 100%
           transition all .3s
           cursor pointer
-
-          &:hover
-          &:focus
-          &:active
-            transform scale(1.1)
