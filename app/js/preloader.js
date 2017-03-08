@@ -61,6 +61,7 @@ function loaderSpinner() {
                     overflow: 'visible'
                 });
                 preloader.addClass('hidden');
+                playMusic();
             });
 
         }

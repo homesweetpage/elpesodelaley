@@ -197,7 +197,6 @@ function animateReady() {
   animateHandler();
   animateScroll();
   animateNav();
-  playMusic();
 }
 
 $(document).ready(animateReady);
