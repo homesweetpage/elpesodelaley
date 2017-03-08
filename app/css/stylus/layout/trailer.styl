@@ -55,7 +55,7 @@
         overflow hidden
         margin-bottom -5px
         transform rotateY(-1.5deg)
-        
+
         .overlay-video
           position absolute
           top 0
@@ -66,15 +66,7 @@
           font-family 'icomoon' !important
           transition all 0.3s
           cursor pointer
-          
-          &:hover
-          &:focus
-          &:active
-            background-color rgba($black, 0.2)
-            
-            &:before
-              color rgba($white, 0.7)
-          
+
           &:before
             position absolute
             top calc(50% - 70px)
@@ -91,3 +83,13 @@
           height 100%
           transition all .3s
           cursor pointer
+
+        &:hover
+        &:focus
+        &:active
+
+          .overlay-video
+            background-color rgba($black, 0.2)
+
+            &:before
+              color rgba($white, 0.7)
