@@ -21,7 +21,7 @@ var createModal = {
     return $div;
   },
   musica: function(src) {
-    var $musica = $('<iframe class="col-md-6 test123" height="135" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/'+src+'&amp;auto_play=false&amp;color=3b5998&amp;hide_related=false&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false"></iframe>');
+    var $musica = $('<iframe class="col-md-6" height="135" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/'+src+'&amp;auto_play=false&amp;color=3b5998&amp;hide_related=false&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false"></iframe>');
     return $musica;
   },
   carouselRodaje: function() {

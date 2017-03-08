@@ -41,7 +41,7 @@ function runStylus() {
 }
 
 function jsHint() {
-  return gulp.src([paths.app + paths.js + '/main.js', './gulpfile.js', paths.app + paths.js + '/animate.js', paths.app + paths.js + '/typewriter.js', paths.app + paths.js + '/modal.js'])
+  return gulp.src([paths.app + paths.js + '/main.js', './gulpfile.js', paths.app + paths.js + '/animate.js', paths.app + paths.js + '/typewriter.js', paths.app + paths.js + '/modal.js', paths.app + paths.js + '/preloader.js'])
     .pipe(plumber(plumberOpts))
     .pipe(jshint('.jshintrc'))
     .pipe(jshint.reporter('jshint-stylish'))
