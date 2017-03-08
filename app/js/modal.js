@@ -21,7 +21,7 @@ var createModal = {
     return $div;
   },
   musica: function(src) {
-    var $musica = $('<iframe class="col-md-6" height="135" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/'+src+'&amp;auto_play=false&amp;color=3b5998&amp;hide_related=false&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false"></iframe>');
+    var $musica = $('<iframe class="col-md-8 col-md-offset-2" height="450px" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/'+src+'&amp;color=3b5998&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>');
     return $musica;
   },
   carouselRodaje: function() {
@@ -40,7 +40,6 @@ var createModal = {
 
 function modalInsert($el) {
   $('#Modal').css('display','block');
-  $('.mbody').empty();
   $el.appendTo('.mbody');
 }
 
@@ -150,47 +149,49 @@ function modalSinopsis() {
 
 function modalMusica() {
   $('#musica-completa').click(function(event) {
-    event.preventDefault();
-    var playlist = [{
-      title: 'Preludio Nro. 2 en Cm (Do menor) El Clave Bien Temperado Libro I (y piezas que a partir de él surgen):',
-      list: ['310912563','310912558','310912556','310912554','310912552','310912546','310912541','310912535']
-      },{
-      title: 'Suite Francesa en Cm (Do menor) (ALLEMANDA Y SARABANDA):',
-      list: ['310912531','310912522','310912513','310912507','310912503']
-      },{
-      title: 'Preludio Nro. 10 en Em (Mi menor) El Clave Bien Temperado Libro I (y piezas que a partir de él surgen):',
-      list: ['310912500','310912498','310912496','310912494','310912488']
-      },{
-      title: 'Preludio en C#, El Clave Bien Temperado Libro I:',
-      list: ['310912483','310912481']
-      },{
-      title: 'Fuga en C#, El Clave Bien Temperado Libro I:',
-      list: ['310912474','310912470']
-      },{
-      title: 'Fuga en Em (Mi menor), El Clave Bien Temperado Libro I:',
-      list: ['310912467']
-      }];
+    if (!animateResponsive()) {
+      event.preventDefault();
+      var playlist = [{
+        title: 'Preludio Nro. 2 en Cm (Do menor) El Clave Bien Temperado Libro I (y piezas que a partir de él surgen):',
+        list: ['305735321']
+        },{
+        title: 'Suite Francesa en Cm (Do menor) (ALLEMANDA Y SARABANDA):',
+        list: ['305736775']
+        },{
+        title: 'Preludio Nro. 10 en Em (Mi menor) El Clave Bien Temperado Libro I (y piezas que a partir de él surgen):',
+        list: ['305737704']
+        },{
+        title: 'Preludio en C#, El Clave Bien Temperado Libro I:',
+        list: ['305738228']
+        },{
+        title: 'Fuga en C#, El Clave Bien Temperado Libro I:',
+        list: ['305738732']
+        },{
+        title: 'Fuga en Em (Mi menor), El Clave Bien Temperado Libro I:',
+        list: ['311345463']
+        }];
 
-    var $container = createModal.container(createModal.h1(playlist[0].title));
-    for (var i = 0; i < playlist[0].list.length; i++) {
-      createModal.musica(playlist[0].list[i]).appendTo($container);
-    }
-
-    for (var j = 1; j < playlist.length; j++) {
-      createModal.h1(playlist[j].title).appendTo($container);
-      for (var k = 0; k < playlist[j].list.length; k++) {
-        createModal.musica(playlist[j].list[k]).appendTo($container);
+      var $container = createModal.container(createModal.h1(playlist[0].title));
+      for (var i = 0; i < playlist[0].list.length; i++) {
+        createModal.musica(playlist[0].list[i]).appendTo($container);
       }
+
+      for (var j = 1; j < playlist.length; j++) {
+        createModal.h1(playlist[j].title).appendTo($container);
+        for (var k = 0; k < playlist[j].list.length; k++) {
+          createModal.musica(playlist[j].list[k]).appendTo($container);
+        }
+      }
+
+      modalInsert($container);
     }
+  });
+}
 
-
-    // var $h1 = $('<h1>title</h1>');
-    // var $musica = ['310912563','310912558','310912556','310912554','310912552','310912546','310912541','310912535'];
-    // var $container = createModal.container($h1);
-    // for (var i = 0; i < $musica.length; i++) {
-    //   createModal.musica($musica[i]).appendTo($container);
-    // }
-    modalInsert($container);
+function modalClose() {
+  var mclose = $('.mclose');
+  mclose.click(function() {
+    $('.mbody').empty();
   });
 }
 
@@ -201,6 +202,7 @@ function modalReady() {
   modalCast();
   modalSinopsis();
   modalMusica();
+  modalClose();
 }
 
 $(document).ready(modalReady);
