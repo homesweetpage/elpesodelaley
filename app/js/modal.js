@@ -183,13 +183,6 @@ function modalMusica() {
         }
       }
 
-
-      // var $h1 = $('<h1>title</h1>');
-      // var $musica = ['310912563','310912558','310912556','310912554','310912552','310912546','310912541','310912535'];
-      // var $container = createModal.container($h1);
-      // for (var i = 0; i < $musica.length; i++) {
-      //   createModal.musica($musica[i]).appendTo($container);
-      // }
       modalInsert($container);
     }
   });
