@@ -1,5 +1,4 @@
 'use strict';
-
 var audio;
 
 function smoothScrolling() {
@@ -51,9 +50,6 @@ function soundHandle() {
 function documentReady() {
 	smoothScrolling();
 	soundHandle();
-    audio = new Audio('audio/creditos finales.mp3');
-	audio.volume = 0.2;
-    audio.play();
 }
 
 $(document).ready(documentReady);

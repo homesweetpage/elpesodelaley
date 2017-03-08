@@ -84,7 +84,7 @@ function modalCast() {
     event.preventDefault();
     var $img = createModal.img();
     var $container = createModal.container($img);
-    $img.attr('src', 'images/postales/personajes/lldll_a02_032526.jpg');
+    $img.attr('src', 'images/postales/personajes/barrientos.jpg');
     modalInsert($container);
   });
   $('#pj-onetto').click(function(event) {
@@ -143,7 +143,7 @@ function modalSinopsis() {
     event.preventDefault();
     var $img = createModal.img();
     var $container = createModal.container($img);
-    $img.attr('src', 'images/postales/galeria/test2 lldll_a02_000615.jpg');
+    $img.attr('src', 'images/sinopsis.jpg');
     modalInsert($container);
   });
 }
@@ -176,10 +176,10 @@ function modalMusica() {
       createModal.musica(playlist[0].list[i]).appendTo($container);
     }
 
-    for (var i = 1; i < playlist.length; i++) {
-      createModal.h1(playlist[i].title).appendTo($container);
-      for (var j = 0; j < playlist[i].list.length; j++) {
-        createModal.musica(playlist[i].list[j]).appendTo($container);
+    for (var j = 1; j < playlist.length; j++) {
+      createModal.h1(playlist[j].title).appendTo($container);
+      for (var k = 0; k < playlist[j].list.length; k++) {
+        createModal.musica(playlist[j].list[k]).appendTo($container);
       }
     }
 

@@ -182,10 +182,22 @@ function animateScroll() {
   $(window).scroll(scrollThrottler);
 }
 
+function playMusic(){
+  if(!animateResponsive()){
+    audio = new Audio('audio/creditos finales.mp3');
+    audio.volume = 0.2;
+    audio.play();
+  }
+  else{
+    $('#soundControl').addClass('hidden');
+  }
+}
+
 function animateReady() {
   animateHandler();
   animateScroll();
   animateNav();
+  playMusic();
 }
 
 $(document).ready(animateReady);
