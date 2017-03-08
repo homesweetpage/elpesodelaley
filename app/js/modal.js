@@ -20,8 +20,8 @@ var createModal = {
     $video.appendTo($div);
     return $div;
   },
-  musica: function(src) {
-    var $musica = $('<iframe class="col-md-8 col-md-offset-2" height="450px" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/'+src+'&amp;color=3b5998&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>');
+  musica: function(tipo,src) {
+    var $musica = $('<iframe class="col-md-8 col-md-offset-2" height="450px" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/'+ tipo +'/'+ src +'&amp;color=3b5998&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>');
     return $musica;
   },
   carouselRodaje: function() {
@@ -29,7 +29,7 @@ var createModal = {
     return $carouselRodaje;
   },
   carouselRodaje2: function() {
-    var $carouselRodaje2 = $('<section id="mr2galeria" class="carousel slide carousel-fade" data-ride="carousel"><div class="carousel-inner" role="listbox"><div class="item active"><img src="images/rodaje-bn/rodaje2-1.JPG" data-color="red" alt="Foto de rodaje - Blanco y Negro"></div><div class="item"><img src="images/rodaje-bn/rodaje2-3.JPG" data-color="yellow" al<<"Darío Grandinetti"></div><div class="item"><img src="images/rodaje-bn/rodaje2-4.JPG" data-color="green" alt="Foto de rodaje - Blanco y Negro"></div><div class="item"><img src="images/rodaje-bn/rodaje2-5.JPG" data-color="turquoise" alt="Foto de rodaje - Blanco y Negro"></div><div class="item"><img src="images/rodaje-bn/rodaje2-6.JPG" data-color="blue" alt="Foto de rodaje - Blanco y Negro"></div></div><a class="left carousel-control carousel-control-left" href="#mr2galeria" role="button" data-slide="prev"><img src="images/arrow-left-h.png" alt="Left Arrow" /><span class="sr-only">Previous</span></a><a class="right carousel-control carousel-control-right" href="#mr2galeria" role="button" data-slide="next"><img src="images/arrow-right-h.png" alt="Right Arrow" /><span class="sr-only">Next</span></a></section>');
+    var $carouselRodaje2 = $('<section id="mr2galeria" class="carousel slide carousel-fade" data-ride="carousel"><div class="carousel-inner" role="listbox"><div class="item active"><img src="images/rodaje-bn/rodaje2-1.JPG" data-color="red" alt="Foto de rodaje - Blanco y Negro"></div><div class="item"><img src="images/rodaje-bn/rodaje2-2.JPG" data-color="orange" alt="Foto de rodaje - Blanco y Negro"></div><div class="item"><img src="images/rodaje-bn/rodaje2-3.JPG" data-color="yellow" al<<"Darío Grandinetti"></div><div class="item"><img src="images/rodaje-bn/rodaje2-4.JPG" data-color="green" alt="Foto de rodaje - Blanco y Negro"></div><div class="item"><img src="images/rodaje-bn/rodaje2-5.JPG" data-color="turquoise" alt="Foto de rodaje - Blanco y Negro"></div><div class="item"><img src="images/rodaje-bn/rodaje2-6.jpg" data-color="blue" alt="Foto de rodaje - Blanco y Negro"></div></div><a class="left carousel-control carousel-control-left" href="#mr2galeria" role="button" data-slide="prev"><img src="images/arrow-left-h.png" alt="Left Arrow" /><span class="sr-only">Previous</span></a><a class="right carousel-control carousel-control-right" href="#mr2galeria" role="button" data-slide="next"><img src="images/arrow-right-h.png" alt="Right Arrow" /><span class="sr-only">Next</span></a></section>');
     return $carouselRodaje2;
   },
   carouselPrensa: function() {
@@ -153,33 +153,39 @@ function modalMusica() {
       event.preventDefault();
       var playlist = [{
         title: 'Preludio Nro. 2 en Cm (Do menor) El Clave Bien Temperado Libro I (y piezas que a partir de él surgen):',
-        list: ['305735321']
+        list: ['305735321'],
+        tipo: 'playlists'
         },{
         title: 'Suite Francesa en Cm (Do menor) (ALLEMANDA Y SARABANDA):',
-        list: ['305736775']
+        list: ['305736775'],
+        tipo: 'playlists'
         },{
         title: 'Preludio Nro. 10 en Em (Mi menor) El Clave Bien Temperado Libro I (y piezas que a partir de él surgen):',
-        list: ['305737704']
+        list: ['305737704'],
+        tipo: 'playlists'
         },{
         title: 'Preludio en C#, El Clave Bien Temperado Libro I:',
-        list: ['305738228']
+        list: ['305738228'],
+        tipo: 'playlists'
         },{
         title: 'Fuga en C#, El Clave Bien Temperado Libro I:',
-        list: ['305738732']
+        list: ['305738732'],
+        tipo: 'playlists'
         },{
         title: 'Fuga en Em (Mi menor), El Clave Bien Temperado Libro I:',
-        list: ['311345463']
+        list: ['311345463'],
+        tipo: 'tracks'
         }];
 
       var $container = createModal.container(createModal.h1(playlist[0].title));
       for (var i = 0; i < playlist[0].list.length; i++) {
-        createModal.musica(playlist[0].list[i]).appendTo($container);
+        createModal.musica(playlist[0].tipo,playlist[0].list[i]).appendTo($container);
       }
 
       for (var j = 1; j < playlist.length; j++) {
         createModal.h1(playlist[j].title).appendTo($container);
         for (var k = 0; k < playlist[j].list.length; k++) {
-          createModal.musica(playlist[j].list[k]).appendTo($container);
+          createModal.musica(playlist[j].tipo,playlist[j].list[k]).appendTo($container);
         }
       }
 
