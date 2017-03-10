@@ -24,6 +24,7 @@ function animate(st, wa) {
 }
 
 function animateHome(st) {
+  var $name = $('#home');
   var $home = $('#home .title');
   var $img = $home.children('.box-homeLogo').children('img');
   var $span = $home.children('span');
@@ -37,6 +38,7 @@ function animateHome(st) {
         $span.addClass('hidden');
         $img.addClass('animated fadeInDown').one(animationEnd, function() {
           $(this).removeClass('animated fadeInDown');
+          $name.addClass('animateName');
           $span.removeClass('hidden').addClass('animated fadeIn').one(animationEnd, function() {
             $(this).removeClass('animated fadeIn');
             inAnimate.Home = false;
@@ -45,6 +47,7 @@ function animateHome(st) {
       }
     } else if (animate(st, wa)) {
       inAnimate.Home = true;
+      $name.removeClass('animateName');
       $span.addClass('animated fadeOut').one(animationEnd, function() {
         $(this).removeClass('animated fadeOut');
       });
