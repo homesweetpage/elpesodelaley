@@ -3,3 +3,4 @@ node_modules/
 app/css/style.css
 app/images/*
 app/videos/*
+*.sublime-*
