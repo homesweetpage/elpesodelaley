@@ -3,13 +3,47 @@
 
   .section-main
     background-color $black
+    background-image url('../images/expediente.jpg')
+    background-position center
+    background-size cover
     width 100%
     padding 150px 0
     display inline-block
     margin-bottom 50vh
 
-    .col-md-8
+    .exp-main
       text-align center
-      
-      img
-        display inline-block
+      margin 30% 0 0 0
+      text-shadow: 2px 2px 10px $black;
+
+      h3
+        font-family $fontDE
+        font-size 3em
+        color $white
+        text-transform uppercase
+        margin-bottom 20px
+
+      span
+        color $white
+        font-size 1.5em
+        font-weight 700
+        font-family $fontTG
+
+      a
+        color $danger-bc !important
+        font-family $fontTG
+        font-weight 700
+        font-size 1.3em
+        text-decoration none
+        transition all 0.3s
+
+        &:hover
+        &:focus
+        &:active
+          color $danger-hover-bgc !important
+
+        &:before
+          content '('
+
+        &:after
+          content ')'
