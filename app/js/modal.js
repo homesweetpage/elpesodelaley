@@ -35,6 +35,10 @@ var createModal = {
   carouselPrensa: function() {
     var $carouselPrensa = $('<section id="mpgaleria" class="carousel slide carousel-fade" data-ride="carousel"><div class="carousel-inner" role="listbox"><div class="item active"><img src="images/prensa/prensa-barrientos grandinetti onetto.jpg" data-color="red" alt="Barrientos - Grandinetti - Onetto"></div><div class="item"><img src="images/prensa/prensa-barrientos.jpg" data-color="orange" alt="Paola Barrientos"></div><div class="item"><img src="images/prensa/prensa-grandinetti.jpg" data-color="yellow" alt="Darío Grandinetti"></div><div class="item"><img src="images/prensa/prensa-onetto.jpg" data-color="green" alt="María Onetto"></div><div class="item"><img src="images/prensa/prensa-miras.jpg" data-color="turquoise" alt="Fernán Mirás"></div><div class="item"><img src="images/prensa/prensa-todos.jpg" data-color="blue" alt="Fernán Mirás, Paola Barrientos, Darío Grandinetti, María Onetto"></div><div class="item"><img src="images/prensa/prensa-todos1.jpg" data-color="purple" alt="Fernán Mirás, Paola Barrientos, Darío Grandinetti, María Onetto"></div></div><a class="left carousel-control carousel-control-left" href="#mpgaleria" role="button" data-slide="prev"><img src="images/arrow-left-h.png" alt="Left Arrow" /><span class="sr-only">Previous</span></a><a class="right carousel-control carousel-control-right" href="#mpgaleria" role="button" data-slide="next"><img src="images/arrow-right-h.png" alt="Right Arrow" /><span class="sr-only">Next</span></a></section>');
     return $carouselPrensa;
+  },
+  carouselExpediente: function() {
+    var $carouselExpediente = $('<section id="megaleria" class="carousel slide carousel-fade" data-ride="carousel"><div class="carousel-inner" role="listbox"><div class="item active"><img src="images/expediente/15.jpg" data-color="red" alt="Barrientos - Grandinetti - Onetto"></div><div class="item"><img src="images/expediente/13.jpg" data-color="orange" alt="Paola Barrientos"></div><div class="item"><img src="images/expediente/14.jpg" data-color="yellow" alt="Darío Grandinetti"></div><div class="item"><img src="images/expediente/15.jpg" data-color="green" alt="María Onetto"></div><div class="item"><img src="images/prensa/prensa-miras.jpg" data-color="turquoise" alt="Fernán Mirás"></div><div class="item"><img src="images/prensa/prensa-todos.jpg" data-color="blue" alt="Fernán Mirás, Paola Barrientos, Darío Grandinetti, María Onetto"></div><div class="item"><img src="images/prensa/prensa-todos1.jpg" data-color="purple" alt="Fernán Mirás, Paola Barrientos, Darío Grandinetti, María Onetto"></div></div><a class="left carousel-control carousel-control-left" href="#megaleria" role="button" data-slide="prev"><img src="images/arrow-left-h.png" alt="Left Arrow" /><span class="sr-only">Previous</span></a><a class="right carousel-control carousel-control-right" href="#megaleria" role="button" data-slide="next"><img src="images/arrow-right-h.png" alt="Right Arrow" /><span class="sr-only">Next</span></a></section>');
+    return $carouselExpediente;
   }
 };
 
@@ -137,6 +141,15 @@ function modalCast() {
   });
 }
 
+function modalExpediente(){
+  $('#expediente-completo').click(function () {
+    event.preventDefault();
+    var $carouselExpediente = createModal.carouselExpediente();
+    var $container = createModal.container($carouselExpediente);
+    modalInsert($container);
+  });
+}
+
 function modalSinopsis() {
   $('#sinopsis-completa').click(function(event) {
     event.preventDefault();
@@ -207,6 +220,7 @@ function modalReady() {
   modalCarousel();
   modalCast();
   modalSinopsis();
+  modalExpediente();
   modalMusica();
   modalClose();
 }
