@@ -43,6 +43,14 @@ var createModal = {
   carouselExpediente: function() {
     var $carouselExpediente = $('<section id="megaleria" class="carousel slide carousel-fade" data-ride="carousel"><div class="carousel-inner" role="listbox"><div class="item active"><img src="images/expediente/15.jpg" data-color="red" alt="Expediente A"></div><div class="item"><img src="images/expediente/7.jpg" data-color="orange" alt="Expediente B"></div><div class="item"><img src="images/expediente/4.jpg" data-color="yellow" alt="Expediente C-1"></div><div class="item"><img src="images/expediente/3.jpg" data-color="green" alt="Expediente C-2"></div><div class="item"><img src="images/expediente/2.jpg" data-color="turquoise" alt="Expediente C-3"></div><div class="item"><img src="images/expediente/11.jpg" data-color="blue" alt="Expediente D"></div><div class="item"><img src="images/expediente/9.jpg" data-color="purple" alt="Expediente E"></div><div class="item"><img src="images/expediente/6.jpg" data-color="red" alt="Expediente F-1"></div><div class="item"><img src="images/expediente/5.jpg" data-color="orange" alt="Expediente F-2"></div><div class="item"><img src="images/expediente/10.jpg" data-color="yellow" alt="Expediente G"></div><div class="item"><img src="images/expediente/12.jpg" data-color="green" alt="Expediente H"></div></div><a class="left carousel-control carousel-control-left" href="#megaleria" role="button" data-slide="prev"><img src="images/arrow-left-h.png" alt="Left Arrow" /><span class="sr-only">Previous</span></a><a class="right carousel-control carousel-control-right" href="#megaleria" role="button" data-slide="next"><img src="images/arrow-right-h.png" alt="Right Arrow" /><span class="sr-only">Next</span></a></section>');
     return $carouselExpediente;
+  },
+  carouselStoryboards: function() {
+    var $carouselStoryboards = $('<section id="msgaleria" class="carousel slide carousel-fade" data-ride="carousel"><div class="carousel-inner" role="listbox"><div class="item active"><img src="images/storyboards/storyboard1.jpg" data-color="red" alt="Storyboard"></div><div class="item"><img src="images/storyboards/storyboard2.jpg" data-color="orange" alt="Storyboard"></div><div class="item"><img src="images/storyboards/storyboard3.jpg" data-color="yellow" alt="Storyboard"></div><div class="item"><img src="images/storyboards/storyboard4.jpg" data-color="green" alt="Storyboard"></div><div class="item"><img src="images/storyboards/storyboard5.jpg" data-color="turquoise" alt="Storyboard"></div><div class="item"><img src="images/storyboards/storyboard6.jpg" data-color="blue" alt="Storyboard"></div><div class="item"><img src="images/storyboards/storyboard7.jpg" data-color="purple" alt="Storyboard"></div><div class="item"><img src="images/storyboards/storyboard8.jpg" data-color="red" alt="Storyboard"></div><div class="item"><img src="images/storyboards/storyboard9.jpg" data-color="orange" alt="Storyboard"></div><div class="item"><img src="images/storyboards/storyboard10.jpg" data-color="yellow" alt="Storyboard"></div><div class="item"><img src="images/storyboards/storyboard11.jpg" data-color="green" alt="Storyboard"></div><div class="item"><img src="images/storyboards/storyboard12.jpg" data-color="turquoise" alt="Storyboard"></div><div class="item"><img src="images/storyboards/storyboard13.jpg" data-color="blue" alt="Storyboard"></div><div class="item"><img src="images/storyboards/storyboard14.jpg" data-color="purple" alt="Storyboard"></div><div class="item"><img src="images/storyboards/storyboard15.jpg" data-color="red" alt="Storyboard"></div><div class="item"><img src="images/storyboards/storyboard16.jpg" data-color="orange" alt="Storyboard"></div><div class="item"><img src="images/storyboards/storyboard17.jpg" data-color="yellow" alt="Storyboard"></div></div><a class="left carousel-control carousel-control-left" href="#msgaleria" role="button" data-slide="prev"><img src="images/arrow-left-h.png" alt="Left Arrow" /><span class="sr-only">Previous</span></a><a class="right carousel-control carousel-control-right" href="#msgaleria" role="button" data-slide="next"><img src="images/arrow-right-h.png" alt="Right Arrow" /><span class="sr-only">Next</span></a></section>');
+    return $carouselStoryboards;
+  },
+  carouselVestuario: function() {
+    var $carouselVestuario = $('<section id="mvgaleria" class="carousel slide carousel-fade" data-ride="carousel"><div class="carousel-inner" role="listbox"><div class="item active"><img src="images/vestuario/vestuario1.jpg" data-color="red" alt="Vestuario"></div><div class="item"><img src="images/vestuario/vestuario2.jpg" data-color="orange" alt="Vestuario"></div><div class="item"><img src="images/vestuario/vestuario3.jpg" data-color="yellow" alt="Vestuario"></div><div class="item"><img src="images/vestuario/vestuario4.jpg" data-color="green" alt="Vestuario"></div><div class="item"><img src="images/vestuario/vestuario5.jpg" data-color="turquoise" alt="Vestuario"></div><div class="item"><img src="images/vestuario/vestuario6.jpg" data-color="blue" alt="Vestuario"></div><div class="item"><img src="images/vestuario/vestuario7.jpg" data-color="purple" alt="Vestuario"></div><div class="item"><img src="images/vestuario/vestuario8.jpg" data-color="red" alt="Vestuario"></div><div class="item"><img src="images/vestuario/vestuario9.jpg" data-color="orange" alt="Vestuario"></div><div class="item"><img src="images/vestuario/vestuario10.jpg" data-color="yellow" alt="Vestuario"></div><div class="item"><img src="images/vestuario/vestuario11.jpg" data-color="green" alt="Vestuario"></div><div class="item"><img src="images/vestuario/vestuario12.jpg" data-color="turquoise" alt="Vestuario"></div><div class="item"><img src="images/vestuario/vestuario13.jpg" data-color="blue" alt="Vestuario"></div><div class="item"><img src="images/vestuario/vestuario14.jpg" data-color="purple" alt="Vestuario"></div></div><a class="left carousel-control carousel-control-left" href="#mvgaleria" role="button" data-slide="prev"><img src="images/arrow-left-h.png" alt="Left Arrow" /><span class="sr-only">Previous</span></a><a class="right carousel-control carousel-control-right" href="#mvgaleria" role="button" data-slide="next"><img src="images/arrow-right-h.png" alt="Right Arrow" /><span class="sr-only">Next</span></a></section>');
+    return $carouselVestuario;
   }
 };
 
@@ -154,11 +162,11 @@ function modalCrew() {
   });
 }
 
-function modalExpediente(){
-  $('#expediente-completo').click(function () {
+function modalStoryboards(){
+  $('#storyboards').click(function(event) {
     event.preventDefault();
-    var $carouselExpediente = createModal.carouselExpediente();
-    var $container = createModal.container($carouselExpediente);
+    var $carouselStoryboards = createModal.carouselStoryboards();
+    var $container = createModal.container($carouselStoryboards);
     modalInsert($container);
   });
 }
@@ -169,6 +177,24 @@ function modalSinopsis() {
     var $img = createModal.img();
     var $container = createModal.container($img);
     $img.attr('src', 'images/sinopsis.jpg');
+    modalInsert($container);
+  });
+}
+
+function modalExpediente(){
+  $('#expediente-completo').click(function(event) {
+    event.preventDefault();
+    var $carouselExpediente = createModal.carouselExpediente();
+    var $container = createModal.container($carouselExpediente);
+    modalInsert($container);
+  });
+}
+
+function modalVestuario(){
+  $('#vestuario').click(function(event) {
+    event.preventDefault();
+    var $carouselVestuario = createModal.carouselVestuario();
+    var $container = createModal.container($carouselVestuario);
     modalInsert($container);
   });
 }
@@ -235,6 +261,8 @@ function modalReady() {
   modalCrew();
   modalSinopsis();
   modalExpediente();
+  modalStoryboards();
+  modalVestuario();
   modalMusica();
   modalClose();
 }
