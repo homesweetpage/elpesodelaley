@@ -145,6 +145,15 @@ function modalCast() {
   });
 }
 
+function modalCrew() {
+  $('#ficha').click(function(event) {
+    event.preventDefault();
+    var $crew = createModal.crew();
+    var $container = createModal.container($crew);
+    modalInsert($container);
+  });
+}
+
 function modalExpediente(){
   $('#expediente-completo').click(function () {
     event.preventDefault();
@@ -223,6 +232,7 @@ function modalReady() {
   modalTrailer();
   modalCarousel();
   modalCast();
+  modalCrew();
   modalSinopsis();
   modalExpediente();
   modalMusica();
